@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azzar.me</title>
+</head>
+<body>
+    <main>
+        <h1>Vanilla JavaScript App Azzar</h1>
+        <p>Loading content from the API: <b id="apiresponse">...</b></p>
+    </main>
+
+    <script>
+        (async function () {
+            let response = await fetch(`/api/message`);
+            if (response.ok) {
+                let data = await response.text();
+                console.log(data);
+                document.querySelector('#apiresponse').textContent = data;
+            } else {
+                let message = "ERROR " + response.status;
+                console.log(message);
+                document.querySelector('#apiresponse').textContent = message;
+            }
+            
+        }())
+    </script>
+</body>
+</html>

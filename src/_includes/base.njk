@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="black">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head>
+<body>
+    <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content">
+        <div class="flex-none lg:flex">
+            <button class="btn btn-square btn-ghost">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="flex-none px-2 mx-2">
+            <span class="text-lg font-bold">
+                <a href="/">ONart.se</a>
+            </span>
+        </div>
+        <div class="flex-1 px-2 mx-2">
+            <div class="items-stretch hidden lg:flex">
+                <a href="/" class="btn btn-ghost btn-sm rounded-btn">
+                   Home
+                </a>
+               
+                <a href="/About/" class="btn btn-ghost btn-sm rounded-btn">
+                    About 
+                </a>
+                <a class="btn btn-ghost btn-sm rounded-btn">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto">
+    <header>
+        <h1>{{ title }}</h1>
+    </header>
+    {{ content | safe }}
+
+</div>
+</body>
+</html>
